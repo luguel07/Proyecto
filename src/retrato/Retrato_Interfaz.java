@@ -5,21 +5,45 @@
  */
 package retrato;
 
-import java.awt.Image;
-import java.io.IOException;
-import javax.swing.ImageIcon;
-/**
- *
- * @author eblan
- */
-public class Retrato_Interfaz extends javax.swing.JFrame{
-ImageIcon cara1,cara2,cara3,cara4,cara5,cejas1,cejas2,cejas3,cejas4,cejas5,ojos1,ojos2,ojos3,ojos4,ojos5;
-ImageIcon boca1,boca2,boca3,boca4,boca5,barba1,barba2,barba3,barba4,barba5,propiedades;
-/**
-     * Creates new form Retrato_Interfaz
-     */
+import java.awt.Point;
+import javax.swing.JOptionPane;
+
+
+public class Retrato_Interfaz extends javax.swing.JFrame {
+
     public Retrato_Interfaz() {
         initComponents();
+        cara1.setVisible(false);
+        cara2.setVisible(false);
+        cara3.setVisible(false);
+        cara4.setVisible(false);
+        cara5.setVisible(false);
+        cabello1.setVisible(false);
+        cabello2.setVisible(false);
+        cabello3.setVisible(false);
+        cabello4.setVisible(false);
+        cabello5.setVisible(false);
+        cejas1.setVisible(false);
+        cejas4.setVisible(false);
+        cejas3.setVisible(false);
+        cejas2.setVisible(false);
+        cejas5.setVisible(false);
+        ojos1.setVisible(false);
+        ojos2.setVisible(false);
+        ojos3.setVisible(false);
+        ojos4.setVisible(false);
+        ojos5.setVisible(false);
+        boca1.setVisible(false);
+        boca2.setVisible(false);
+        boca3.setVisible(false);
+        boca4.setVisible(false);
+        boca5.setVisible(false);
+        barba1.setVisible(false);
+        barba2.setVisible(false);
+        barba3.setVisible(false);
+        barba4.setVisible(false);
+        barba5.setVisible(false);
+        
     }
 
     /**
@@ -31,30 +55,54 @@ ImageIcon boca1,boca2,boca3,boca4,boca5,barba1,barba2,barba3,barba4,barba5,propi
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        salir = new javax.swing.JButton();
+        panelOpciones = new javax.swing.JPanel();
         regresar = new javax.swing.JButton();
         ayuda = new javax.swing.JButton();
+        salir = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        caras = new javax.swing.JComboBox<>();
-        cabellos = new javax.swing.JComboBox<>();
-        cejas = new javax.swing.JComboBox<>();
-        ojos = new javax.swing.JComboBox<>();
-        bocas = new javax.swing.JComboBox<>();
-        barbas = new javax.swing.JComboBox<>();
+        cabellos = new javax.swing.JComboBox<String>();
+        cejas = new javax.swing.JComboBox<String>();
+        ojos = new javax.swing.JComboBox<String>();
+        bocas = new javax.swing.JComboBox<String>();
+        barbas = new javax.swing.JComboBox<String>();
+        caras = new javax.swing.JComboBox<String>();
+        Panel1 = new javax.swing.JLayeredPane();
+        cara1 = new javax.swing.JLabel();
+        cara2 = new javax.swing.JLabel();
+        cara3 = new javax.swing.JLabel();
+        cara4 = new javax.swing.JLabel();
+        cara5 = new javax.swing.JLabel();
+        cabello1 = new javax.swing.JLabel();
+        cabello2 = new javax.swing.JLabel();
+        cabello3 = new javax.swing.JLabel();
+        cabello4 = new javax.swing.JLabel();
+        cabello5 = new javax.swing.JLabel();
+        cejas1 = new javax.swing.JLabel();
+        cejas2 = new javax.swing.JLabel();
+        cejas3 = new javax.swing.JLabel();
+        cejas4 = new javax.swing.JLabel();
+        cejas5 = new javax.swing.JLabel();
+        ojos1 = new javax.swing.JLabel();
+        ojos2 = new javax.swing.JLabel();
+        ojos3 = new javax.swing.JLabel();
+        ojos4 = new javax.swing.JLabel();
+        ojos5 = new javax.swing.JLabel();
+        boca1 = new javax.swing.JLabel();
+        boca2 = new javax.swing.JLabel();
+        boca3 = new javax.swing.JLabel();
+        boca4 = new javax.swing.JLabel();
+        boca5 = new javax.swing.JLabel();
+        barba1 = new javax.swing.JLabel();
+        barba2 = new javax.swing.JLabel();
+        barba3 = new javax.swing.JLabel();
+        barba4 = new javax.swing.JLabel();
+        barba5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(580, 470));
+        setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
-
-        salir.setBackground(new java.awt.Color(255, 102, 0));
-        salir.setText("SALIR");
-        salir.setToolTipText("SALIR");
-        salir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                salirActionPerformed(evt);
-            }
-        });
+        panelOpciones.setBackground(new java.awt.Color(51, 51, 51));
 
         regresar.setBackground(new java.awt.Color(102, 153, 255));
         regresar.setText("REGRESAR");
@@ -69,36 +117,100 @@ ImageIcon boca1,boca2,boca3,boca4,boca5,barba1,barba2,barba3,barba4,barba5,propi
         ayuda.setForeground(new java.awt.Color(255, 255, 255));
         ayuda.setText("?");
         ayuda.setToolTipText("AYUDA");
+        ayuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ayudaActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+        salir.setBackground(new java.awt.Color(255, 102, 0));
+        salir.setText("SALIR");
+        salir.setToolTipText("SALIR");
+        salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                salirActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelOpcionesLayout = new javax.swing.GroupLayout(panelOpciones);
+        panelOpciones.setLayout(panelOpcionesLayout);
+        panelOpcionesLayout.setHorizontalGroup(
+            panelOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelOpcionesLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(regresar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ayuda)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(salir)
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        panelOpcionesLayout.setVerticalGroup(
+            panelOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelOpcionesLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelOpcionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(regresar)
-                    .addComponent(salir)
-                    .addComponent(ayuda))
-                .addContainerGap(20, Short.MAX_VALUE))
+                    .addComponent(ayuda)
+                    .addComponent(salir))
+                .addGap(25, 25, 25))
         );
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
+
+        cabellos.setBackground(new java.awt.Color(138, 114, 255));
+        cabellos.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
+        cabellos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CABELLO 1", "CABELLO 2", "CABELLO 3", "CABELLO 4", "CABELLO 5" }));
+        cabellos.setToolTipText("CABELLOS");
+        cabellos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cabellosActionPerformed(evt);
+            }
+        });
+
+        cejas.setBackground(new java.awt.Color(138, 114, 255));
+        cejas.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
+        cejas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CEJAS 1", "CEJAS 2", "CEJAS 3", "CEJAS 4", "CEJAS 5" }));
+        cejas.setToolTipText("CEJAS");
+        cejas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cejasActionPerformed(evt);
+            }
+        });
+
+        ojos.setBackground(new java.awt.Color(138, 114, 255));
+        ojos.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
+        ojos.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "OJOS 1", "OJOS 2", "OJOS 3", "OJOS 4", "OJOS 5" }));
+        ojos.setToolTipText("OJOS");
+        ojos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ojosActionPerformed(evt);
+            }
+        });
+
+        bocas.setBackground(new java.awt.Color(138, 114, 255));
+        bocas.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
+        bocas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "BOCA 1", "BOCA 2", "BOCA 3", "BOCA 4", "BOCA 5" }));
+        bocas.setToolTipText("BOCAS");
+        bocas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bocasActionPerformed(evt);
+            }
+        });
+
+        barbas.setBackground(new java.awt.Color(138, 114, 255));
+        barbas.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
+        barbas.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "BARBA 1", "BARBA 2", "BARBA 3", "BARBA 4", "BARBA 5" }));
+        barbas.setToolTipText("BARBAS");
+        barbas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                barbasActionPerformed(evt);
+            }
+        });
 
         caras.setBackground(new java.awt.Color(138, 114, 255));
         caras.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
-        caras.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CARA 1", "CARA 2", "CARA 3", "CARA 4", "CARA 5" }));
+        caras.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "CARA 1", "CARA 2", "CARA 3", "CARA 4", "CARA 5" }));
         caras.setToolTipText("CARAS");
         caras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,63 +218,476 @@ ImageIcon boca1,boca2,boca3,boca4,boca5,barba1,barba2,barba3,barba4,barba5,propi
             }
         });
 
-        cabellos.setBackground(new java.awt.Color(138, 114, 255));
-        cabellos.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
-        cabellos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CABELLO 1", "CABELLO 2", "CABELLO 3", "CABELLO 4", "CABELLO 5" }));
-        cabellos.setToolTipText("CABELLOS");
-
-        cejas.setBackground(new java.awt.Color(138, 114, 255));
-        cejas.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
-        cejas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "CEJAS 1", "CEJAS 2", "CEJAS 3", "CEJAS 4", "CEJAS 5" }));
-        cejas.setToolTipText("CEJAS");
-
-        ojos.setBackground(new java.awt.Color(138, 114, 255));
-        ojos.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
-        ojos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "OJOS 1", "OJOS 2", "OJOS 3", "OJOS 4", "OJOS 5" }));
-        ojos.setToolTipText("OJOS");
-
-        bocas.setBackground(new java.awt.Color(138, 114, 255));
-        bocas.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
-        bocas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BOCA 1", "BOCA 2", "BOCA 3", "BOCA 4", "BOCA 5" }));
-        bocas.setToolTipText("BOCAS");
-
-        barbas.setBackground(new java.awt.Color(138, 114, 255));
-        barbas.setFont(new java.awt.Font("Sitka Text", 0, 12)); // NOI18N
-        barbas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "BARBA 1", "BARBA 2", "BARBA 3", "BARBA 4", "BARBA 5" }));
-        barbas.setToolTipText("BARBAS");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(caras, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addContainerGap(219, Short.MAX_VALUE)
+                .addComponent(caras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56)
                 .addComponent(cabellos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(60, 60, 60)
                 .addComponent(cejas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(73, 73, 73)
                 .addComponent(ojos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(63, 63, 63)
                 .addComponent(bocas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(65, 65, 65)
                 .addComponent(barbas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addGap(316, 316, 316))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(caras, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cabellos, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cejas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ojos, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bocas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(barbas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(282, Short.MAX_VALUE))
+                    .addComponent(barbas, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(caras, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        Panel1.setBackground(new java.awt.Color(0, 153, 153));
+
+        cara1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cara1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/caras/Cara_1.png"))); // NOI18N
+        cara1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cara1MouseDragged(evt);
+            }
+        });
+
+        cara2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cara2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/caras/Cara_2.png"))); // NOI18N
+        cara2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cara2MouseDragged(evt);
+            }
+        });
+
+        cara3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cara3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/caras/Cara_3.png"))); // NOI18N
+        cara3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cara3MouseDragged(evt);
+            }
+        });
+
+        cara4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cara4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/caras/Cara_4.png"))); // NOI18N
+        cara4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cara4MouseDragged(evt);
+            }
+        });
+
+        cara5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cara5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/caras/Cara_5.png"))); // NOI18N
+        cara5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cara5MouseDragged(evt);
+            }
+        });
+
+        cabello1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cabello1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cabello/Cabello_1.png"))); // NOI18N
+        cabello1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cabello1MouseDragged(evt);
+            }
+        });
+
+        cabello2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cabello2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cabello/Cabello_2.png"))); // NOI18N
+        cabello2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cabello2MouseDragged(evt);
+            }
+        });
+
+        cabello3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cabello3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cabello/Cabello_3.png"))); // NOI18N
+        cabello3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cabello3MouseDragged(evt);
+            }
+        });
+
+        cabello4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cabello4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cabello/Cabello_4.png"))); // NOI18N
+        cabello4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cabello4MouseDragged(evt);
+            }
+        });
+
+        cabello5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cabello5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cabello/Cabello_5.png"))); // NOI18N
+        cabello5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cabello5MouseDragged(evt);
+            }
+        });
+
+        cejas1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cejas1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cejas/Cejas_1.png"))); // NOI18N
+        cejas1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cejas1MouseDragged(evt);
+            }
+        });
+
+        cejas2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cejas2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cejas/Cejas_2.png"))); // NOI18N
+        cejas2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cejas2MouseDragged(evt);
+            }
+        });
+
+        cejas3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cejas3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cejas/Cejas_3.png"))); // NOI18N
+        cejas3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cejas3MouseDragged(evt);
+            }
+        });
+
+        cejas4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cejas4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cejas/Cejas_4.png"))); // NOI18N
+        cejas4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cejas4MouseDragged(evt);
+            }
+        });
+
+        cejas5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cejas5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cejas/Cejas_5.png"))); // NOI18N
+        cejas5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                cejas5MouseDragged(evt);
+            }
+        });
+
+        ojos1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ojos1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ojos/Ojos_1.png"))); // NOI18N
+        ojos1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                ojos1MouseDragged(evt);
+            }
+        });
+
+        ojos2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ojos2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ojos/Ojos_2.png"))); // NOI18N
+        ojos2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                ojos2MouseDragged(evt);
+            }
+        });
+
+        ojos3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ojos3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ojos/Ojos_3.png"))); // NOI18N
+        ojos3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                ojos3MouseDragged(evt);
+            }
+        });
+
+        ojos4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ojos/Ojos_4.png"))); // NOI18N
+        ojos4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                ojos4MouseDragged(evt);
+            }
+        });
+
+        ojos5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ojos5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ojos/Ojos_5.png"))); // NOI18N
+        ojos5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                ojos5MouseDragged(evt);
+            }
+        });
+
+        boca1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        boca1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bocas/Boca_1.png"))); // NOI18N
+        boca1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boca1MouseDragged(evt);
+            }
+        });
+
+        boca2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        boca2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bocas/Boca_2.png"))); // NOI18N
+        boca2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boca2MouseDragged(evt);
+            }
+        });
+
+        boca3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        boca3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bocas/Boca_3.png"))); // NOI18N
+        boca3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boca3MouseDragged(evt);
+            }
+        });
+
+        boca4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        boca4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bocas/Boca_4.png"))); // NOI18N
+        boca4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boca4MouseDragged(evt);
+            }
+        });
+
+        boca5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/bocas/Boca_5.png"))); // NOI18N
+        boca5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                boca5MouseDragged(evt);
+            }
+        });
+
+        barba1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/barbas/Barba_1.png"))); // NOI18N
+        barba1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                barba1MouseDragged(evt);
+            }
+        });
+
+        barba2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/barbas/Barba_5.png"))); // NOI18N
+        barba2.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                barba2MouseDragged(evt);
+            }
+        });
+
+        barba3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/barbas/Barba_3.png"))); // NOI18N
+        barba3.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                barba3MouseDragged(evt);
+            }
+        });
+
+        barba4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/barbas/Barba_4.png"))); // NOI18N
+        barba4.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                barba4MouseDragged(evt);
+            }
+        });
+
+        barba5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/barbas/Barba_5.png"))); // NOI18N
+        barba5.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                barba5MouseDragged(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Panel1Layout = new javax.swing.GroupLayout(Panel1);
+        Panel1.setLayout(Panel1Layout);
+        Panel1Layout.setHorizontalGroup(
+            Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Panel1Layout.createSequentialGroup()
+                                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(cejas1)
+                                    .addComponent(ojos1))
+                                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(Panel1Layout.createSequentialGroup()
+                                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(Panel1Layout.createSequentialGroup()
+                                                .addGap(89, 89, 89)
+                                                .addComponent(cejas2))
+                                            .addGroup(Panel1Layout.createSequentialGroup()
+                                                .addGap(98, 98, 98)
+                                                .addComponent(ojos2)))
+                                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(Panel1Layout.createSequentialGroup()
+                                                .addGap(109, 109, 109)
+                                                .addComponent(cejas3)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(cejas4))
+                                            .addGroup(Panel1Layout.createSequentialGroup()
+                                                .addGap(67, 67, 67)
+                                                .addComponent(ojos3)
+                                                .addGap(187, 187, 187)
+                                                .addComponent(ojos4)))
+                                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(Panel1Layout.createSequentialGroup()
+                                                .addGap(109, 109, 109)
+                                                .addComponent(ojos5))
+                                            .addGroup(Panel1Layout.createSequentialGroup()
+                                                .addGap(117, 117, 117)
+                                                .addComponent(cejas5))))
+                                    .addGroup(Panel1Layout.createSequentialGroup()
+                                        .addGap(98, 98, 98)
+                                        .addComponent(barba2)
+                                        .addGap(218, 218, 218)
+                                        .addComponent(barba4)
+                                        .addGap(38, 38, 38)
+                                        .addComponent(barba5)
+                                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addGroup(Panel1Layout.createSequentialGroup()
+                                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(Panel1Layout.createSequentialGroup()
+                                        .addComponent(cara1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(cara2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(cara3)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(cara4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(cara5))
+                                    .addGroup(Panel1Layout.createSequentialGroup()
+                                        .addComponent(cabello1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(cabello2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(cabello3)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(cabello4)
+                                        .addGap(47, 47, 47)
+                                        .addComponent(cabello5))
+                                    .addComponent(barba1))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 14, Short.MAX_VALUE))
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(barba3)
+                            .addGroup(Panel1Layout.createSequentialGroup()
+                                .addComponent(boca1)
+                                .addGap(150, 150, 150)
+                                .addComponent(boca2)
+                                .addGap(137, 137, 137)
+                                .addComponent(boca3)))
+                        .addGap(166, 166, 166)
+                        .addComponent(boca4)
+                        .addGap(105, 105, 105)
+                        .addComponent(boca5)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        Panel1Layout.setVerticalGroup(
+            Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Panel1Layout.createSequentialGroup()
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cara2)
+                            .addComponent(cara1)))
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(Panel1Layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(cara3))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Panel1Layout.createSequentialGroup()
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cara5)
+                                    .addComponent(cara4))
+                                .addGap(12, 12, 12)))
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Panel1Layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cabello2)
+                                    .addComponent(cabello3)
+                                    .addComponent(cabello4)
+                                    .addComponent(cabello1)))
+                            .addComponent(cabello5))))
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cejas1)
+                            .addComponent(cejas2)
+                            .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(cejas4)
+                                .addComponent(cejas3)))
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(Panel1Layout.createSequentialGroup()
+                                .addGap(46, 46, 46)
+                                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ojos1)
+                                    .addComponent(ojos2)))
+                            .addGroup(Panel1Layout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addComponent(ojos3))))
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(cejas5)
+                        .addGap(33, 33, 33)
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ojos5)
+                            .addComponent(ojos4))))
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(boca5)
+                            .addComponent(boca4)))
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(boca2)
+                            .addComponent(boca3)
+                            .addComponent(boca1))))
+                .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(barba1))
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(barba2))
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(barba3))
+                    .addGroup(Panel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(Panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(barba5)
+                            .addComponent(barba4))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        Panel1.setLayer(cara1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(cara2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(cara3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(cara4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(cara5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(cabello1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(cabello2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(cabello3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(cabello4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(cabello5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(cejas1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(cejas2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(cejas3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(cejas4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(cejas5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(ojos1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(ojos2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(ojos3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(ojos4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(ojos5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(boca1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(boca2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(boca3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(boca4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(boca5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(barba1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(barba2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(barba3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(barba4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        Panel1.setLayer(barba5, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -171,17 +696,23 @@ ImageIcon boca1,boca2,boca3,boca4,boca5,barba1,barba2,barba3,barba4,barba5,propi
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Panel1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelOpciones, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(panelOpciones, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Panel1)
                 .addContainerGap())
         );
 
@@ -189,26 +720,459 @@ ImageIcon boca1,boca2,boca3,boca4,boca5,barba1,barba2,barba3,barba4,barba5,propi
     }// </editor-fold>//GEN-END:initComponents
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
-       System.exit(0);
+        
+        JOptionPane.showMessageDialog(null, "Adios...");
+        System.exit(0);
     }//GEN-LAST:event_salirActionPerformed
 
     private void regresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_regresarActionPerformed
         this.setVisible(false);
-        Interfaz interfaz= new Interfaz();
+        Interfaz interfaz = new Interfaz();
         interfaz.setVisible(true);
-       
+
     }//GEN-LAST:event_regresarActionPerformed
 
+    private void cabellosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cabellosActionPerformed
+        String mensage = "El cabello que eligio es: ";
+        switch(cabellos.getSelectedIndex()){
+            case 0:
+                
+                cabello1.setVisible(true);
+                cabello2.setVisible(false);
+                cabello3.setVisible(false);
+                cabello4.setVisible(false);
+                cabello5.setVisible(false);
+                System.out.println(mensage + cabellos.getSelectedItem());
+
+            break;
+            case 1:
+                
+                cabello1.setVisible(false);
+                cabello2.setVisible(true);
+                cabello3.setVisible(false);
+                cabello4.setVisible(false);
+                cabello5.setVisible(false);
+                System.out.println(mensage + cabellos.getSelectedItem());
+
+            break;
+            case 2:
+                
+                cabello1.setVisible(false);
+                cabello2.setVisible(false);
+                cabello3.setVisible(true);
+                cabello4.setVisible(false);
+                cabello5.setVisible(false);
+                System.out.println(mensage + cabellos.getSelectedItem());
+
+            break;
+            case 3:
+                
+                cabello1.setVisible(false);
+                cabello2.setVisible(false);
+                cabello3.setVisible(false);
+                cabello4.setVisible(true);
+                cabello5.setVisible(false);
+                System.out.println(mensage + cabellos.getSelectedItem());
+            break;
+            case 4:
+                
+                cabello1.setVisible(false);
+                cabello2.setVisible(false);
+                cabello3.setVisible(false);
+                cabello4.setVisible(false);
+                cabello5.setVisible(true);
+
+            System.out.println(mensage + cabellos.getSelectedItem());
+            break;
+        }
+    }//GEN-LAST:event_cabellosActionPerformed
+
+    private void cejasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cejasActionPerformed
+        String mensage = "Las cejas que eligio son: ";
+        switch(cejas.getSelectedIndex()){
+            case 0:
+                
+                cejas1.setVisible(true);
+                cejas2.setVisible(false);
+                cejas3.setVisible(false);
+                cejas4.setVisible(false);
+                cejas5.setVisible(false);
+                System.out.println(mensage + cejas.getSelectedItem());
+
+            break;
+            case 1:
+                cejas1.setVisible(false);
+                cejas2.setVisible(true);
+                cejas3.setVisible(false);
+                cejas4.setVisible(false);
+                cejas5.setVisible(false);
+                System.out.println(mensage + cejas.getSelectedItem());
+
+            break;
+            case 2:
+                cejas1.setVisible(false);
+                cejas2.setVisible(false);
+                cejas3.setVisible(true);
+                cejas4.setVisible(false);
+                cejas5.setVisible(false);
+                System.out.println(mensage + cejas.getSelectedItem());
+
+            break;
+            case 3:
+                cejas1.setVisible(false);
+                cejas2.setVisible(false);
+                cejas3.setVisible(false);
+                cejas4.setVisible(true);
+                cejas5.setVisible(false);
+                System.out.println(mensage + cejas.getSelectedItem());
+            break;
+            case 4:
+                cejas1.setVisible(false);
+                cejas2.setVisible(false);
+                cejas3.setVisible(false);
+                cejas4.setVisible(false);
+                cejas5.setVisible(true);
+
+            System.out.println(mensage + cejas.getSelectedItem());
+            break;
+        }
+    }//GEN-LAST:event_cejasActionPerformed
+
+    private void ojosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ojosActionPerformed
+        String mensage = "Los ojos que eligio son: ";
+        switch(ojos.getSelectedIndex()){
+            case 0:
+                ojos1.setVisible(true);
+                ojos2.setVisible(false);
+                ojos3.setVisible(false);
+                ojos4.setVisible(false);
+                ojos5.setVisible(false);
+                System.out.println(mensage + ojos.getSelectedItem());
+
+            break;
+            case 1:
+                ojos1.setVisible(false);
+                ojos2.setVisible(true);
+                ojos3.setVisible(false);
+                ojos4.setVisible(false);
+                ojos5.setVisible(false);
+                System.out.println(mensage + ojos.getSelectedItem());
+
+            break;
+            case 2:
+                ojos1.setVisible(false);
+                ojos2.setVisible(false);
+                ojos3.setVisible(true);
+                ojos4.setVisible(false);
+                ojos5.setVisible(false);
+                System.out.println(mensage + ojos.getSelectedItem());
+
+            break;
+            case 3:
+                ojos1.setVisible(false);
+                ojos2.setVisible(false);
+                ojos3.setVisible(false);
+                ojos4.setVisible(true);
+                ojos5.setVisible(false);
+                System.out.println(mensage + ojos.getSelectedItem());
+            break;
+            case 4:
+                ojos1.setVisible(false);
+                ojos2.setVisible(false);
+                ojos3.setVisible(false);
+                ojos4.setVisible(false);
+                ojos5.setVisible(true);
+
+            System.out.println(mensage + ojos.getSelectedItem());
+            break;
+        }
+    }//GEN-LAST:event_ojosActionPerformed
+
+    private void bocasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bocasActionPerformed
+        String mensage = "La boca que eligio es: ";
+        switch(bocas.getSelectedIndex()){
+            case 0:
+                boca1.setLocation(new Point(1,1));
+                boca1.setVisible(true);
+                boca2.setVisible(false);
+                boca3.setVisible(false);
+                boca4.setVisible(false);
+                boca5.setVisible(false);
+                System.out.println(mensage + bocas.getSelectedItem());
+
+            break;
+            case 1:
+                boca1.setVisible(false);
+                boca2.setVisible(true);
+                boca3.setVisible(false);
+                boca4.setVisible(false);
+                boca5.setVisible(false);
+                System.out.println(mensage + bocas.getSelectedItem());
+
+            break;
+            case 2:
+                boca1.setVisible(false);
+                boca2.setVisible(false);
+                boca3.setVisible(true);
+                boca4.setVisible(false);
+                boca5.setVisible(false);
+                System.out.println(mensage + bocas.getSelectedItem());
+            break;
+            case 3:
+                boca1.setVisible(false);
+                boca2.setVisible(false);
+                boca3.setVisible(false);
+                boca4.setVisible(true);
+                boca5.setVisible(false);
+                System.out.println(mensage + bocas.getSelectedItem());
+            break;
+            case 4:
+                boca1.setVisible(false);
+                boca2.setVisible(false);
+                boca3.setVisible(false);
+                boca4.setVisible(false);
+                boca5.setVisible(true);
+
+            System.out.println(mensage + bocas.getSelectedItem());
+            break;
+        }
+    }//GEN-LAST:event_bocasActionPerformed
+
+    private void barbasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_barbasActionPerformed
+        String mensage = "La barba que eligio es: ";
+        switch(barbas.getSelectedIndex()){
+            case 0:
+                barba1.setVisible(true);
+                barba2.setVisible(false);
+                barba3.setVisible(false);
+                barba4.setVisible(false);
+                barba5.setVisible(false);
+                System.out.println(mensage + barbas.getSelectedItem());
+
+            break;
+            case 1:
+                barba1.setVisible(false);
+                barba2.setVisible(true);
+                barba3.setVisible(false);
+                barba4.setVisible(false);
+                barba5.setVisible(false);
+                System.out.println(mensage + barbas.getSelectedItem());
+
+            break;
+            case 2:
+                barba1.setVisible(false);
+                barba2.setVisible(false);
+                barba3.setVisible(true);
+                barba4.setVisible(false);
+                barba5.setVisible(false);
+                System.out.println(mensage + barbas.getSelectedItem());
+
+            break;
+            case 3:
+                barba1.setVisible(false);
+                barba2.setVisible(false);
+                barba3.setVisible(false);
+                barba4.setVisible(true);
+                barba5.setVisible(false);
+                System.out.println(mensage + barbas.getSelectedItem());
+            break;
+            case 4:
+                barba1.setVisible(false);
+                barba2.setVisible(false);
+                barba3.setVisible(false);
+                barba4.setVisible(false);
+                barba5.setVisible(true);
+
+            System.out.println(mensage + barbas.getSelectedItem());
+            break;
+        }
+    }//GEN-LAST:event_barbasActionPerformed
+
+    private void cara1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cara1MouseDragged
+        cara1.setLocation(cara1.getLocation().x + evt.getX(), cara1.getLocation().y + evt.getY());
+    }//GEN-LAST:event_cara1MouseDragged
+
+    private void cara2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cara2MouseDragged
+         cara2.setLocation(cara2.getLocation().x + evt.getX(), cara2.getLocation().y + evt.getY());
+    }//GEN-LAST:event_cara2MouseDragged
+
+    private void cara3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cara3MouseDragged
+       cara3.setLocation(cara3.getLocation().x + evt.getX(), cara3.getLocation().y + evt.getY());
+    }//GEN-LAST:event_cara3MouseDragged
+
+    private void cara4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cara4MouseDragged
+     cara4.setLocation(cara4.getLocation().x + evt.getX(), cara4.getLocation().y + evt.getY());
+    }//GEN-LAST:event_cara4MouseDragged
+
+    private void cara5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cara5MouseDragged
+       cara5.setLocation(cara5.getLocation().x + evt.getX(), cara5.getLocation().y + evt.getY());
+    }//GEN-LAST:event_cara5MouseDragged
+
+    private void cabello1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cabello1MouseDragged
+       cabello1.setLocation(cabello1.getLocation().x + evt.getX(), cabello1.getLocation().y + evt.getY());
+    }//GEN-LAST:event_cabello1MouseDragged
+
+    private void cabello2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cabello2MouseDragged
+ cabello2.setLocation(cabello2.getLocation().x + evt.getX(), cabello2.getLocation().y + evt.getY());    }//GEN-LAST:event_cabello2MouseDragged
+
+    private void cabello3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cabello3MouseDragged
+       cabello3.setLocation(cabello3.getLocation().x + evt.getX(), cabello3.getLocation().y + evt.getY());
+    }//GEN-LAST:event_cabello3MouseDragged
+
+    private void cabello4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cabello4MouseDragged
+       cabello4.setLocation(cabello4.getLocation().x + evt.getX(), cabello4.getLocation().y + evt.getY());
+    }//GEN-LAST:event_cabello4MouseDragged
+
+    private void cabello5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cabello5MouseDragged
+       cabello5.setLocation(cabello5.getLocation().x + evt.getX(), cabello5.getLocation().y + evt.getY());
+    }//GEN-LAST:event_cabello5MouseDragged
+
+    private void cejas1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cejas1MouseDragged
+        cejas1.setLocation(cejas1.getLocation().x + evt.getX(), cejas1.getLocation().y + evt.getY());
+    }//GEN-LAST:event_cejas1MouseDragged
+
+    private void cejas2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cejas2MouseDragged
+       cejas2.setLocation(cejas2.getLocation().x + evt.getX(), cejas2.getLocation().y + evt.getY());
+    }//GEN-LAST:event_cejas2MouseDragged
+
+    private void cejas3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cejas3MouseDragged
+        cejas3.setLocation(cejas3.getLocation().x + evt.getX(), cejas3.getLocation().y + evt.getY());
+    }//GEN-LAST:event_cejas3MouseDragged
+
+    private void cejas4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cejas4MouseDragged
+        cejas4.setLocation(cejas4.getLocation().x + evt.getX(), cejas4.getLocation().y + evt.getY());
+    }//GEN-LAST:event_cejas4MouseDragged
+
+    private void cejas5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cejas5MouseDragged
+        cejas5.setLocation(cejas5.getLocation().x + evt.getX(), cejas5.getLocation().y + evt.getY());
+    }//GEN-LAST:event_cejas5MouseDragged
+
+    private void ojos1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ojos1MouseDragged
+        ojos1.setLocation(ojos1.getLocation().x + evt.getX(), ojos1.getLocation().y + evt.getY());
+    }//GEN-LAST:event_ojos1MouseDragged
+
+    private void ojos2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ojos2MouseDragged
+         ojos2.setLocation(ojos2.getLocation().x + evt.getX(), ojos2.getLocation().y + evt.getY());
+    }//GEN-LAST:event_ojos2MouseDragged
+
+    private void ojos3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ojos3MouseDragged
+         ojos3.setLocation(ojos3.getLocation().x + evt.getX(), ojos3.getLocation().y + evt.getY());
+    }//GEN-LAST:event_ojos3MouseDragged
+
+    private void ojos4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ojos4MouseDragged
+         ojos4.setLocation(ojos4.getLocation().x + evt.getX(), ojos4.getLocation().y + evt.getY());
+    }//GEN-LAST:event_ojos4MouseDragged
+
+    private void ojos5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ojos5MouseDragged
+         ojos5.setLocation(ojos5.getLocation().x + evt.getX(), ojos5.getLocation().y + evt.getY());
+    }//GEN-LAST:event_ojos5MouseDragged
+
+    private void boca1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boca1MouseDragged
+       boca1.setLocation(boca1.getLocation().x + evt.getX(), boca1.getLocation().y + evt.getY());
+    }//GEN-LAST:event_boca1MouseDragged
+
+    private void boca2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boca2MouseDragged
+        boca2.setLocation(boca2.getLocation().x + evt.getX(), boca2.getLocation().y + evt.getY());
+    }//GEN-LAST:event_boca2MouseDragged
+
+    private void boca3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boca3MouseDragged
+         boca3.setLocation(boca3.getLocation().x + evt.getX(), boca3.getLocation().y + evt.getY());
+    }//GEN-LAST:event_boca3MouseDragged
+
+    private void boca4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boca4MouseDragged
+         boca4.setLocation(boca4.getLocation().x + evt.getX(), boca4.getLocation().y + evt.getY());
+    }//GEN-LAST:event_boca4MouseDragged
+
+    private void boca5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boca5MouseDragged
+         boca5.setLocation(boca5.getLocation().x + evt.getX(), boca5.getLocation().y + evt.getY());
+    }//GEN-LAST:event_boca5MouseDragged
+
+    private void barba1MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barba1MouseDragged
+        barba1.setLocation(barba1.getLocation().x + evt.getX(), barba1.getLocation().y + evt.getY());
+    }//GEN-LAST:event_barba1MouseDragged
+
+    private void barba2MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barba2MouseDragged
+       barba2.setLocation(barba2.getLocation().x + evt.getX(), barba2.getLocation().y + evt.getY());
+    }//GEN-LAST:event_barba2MouseDragged
+
+    private void barba3MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barba3MouseDragged
+        barba3.setLocation(barba3.getLocation().x + evt.getX(), barba3.getLocation().y + evt.getY());
+    }//GEN-LAST:event_barba3MouseDragged
+
+    private void barba4MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barba4MouseDragged
+       barba4.setLocation(barba4.getLocation().x + evt.getX(), barba4.getLocation().y + evt.getY());
+    }//GEN-LAST:event_barba4MouseDragged
+
+    private void barba5MouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_barba5MouseDragged
+        barba5.setLocation(barba5.getLocation().x + evt.getX(), barba5.getLocation().y + evt.getY());
+    }//GEN-LAST:event_barba5MouseDragged
+
+    private void ayudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ayudaActionPerformed
+     JOptionPane.showMessageDialog(null, "Por favor selecciona el rostro que desee"+"\n"+"Seleccione cada uno de los elementos"+"\n"+"Y luego arrastrelos solamente.");
+     
+    
+    }//GEN-LAST:event_ayudaActionPerformed
+
     private void carasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carasActionPerformed
-      String mensage = "La cara que eligio es: ";  
-      System.out.println(mensage + caras.getSelectedItem());
-         /*cara1 = new ImageIcon(getClass().getResource("/imagenes/caras/Cara_1.jpg"));
-            propiedades = new ImageIcon(cara1.getImage().getScaledInstance(lienzo.getWidth(), lienzo.getHeight(), Image.SCALE_DEFAULT));
-            lienzo.setIcon(ojos1);
-            this.repaint();
-            String mensage = "La cara que eligio es: ";
-            System.out.println(mensage + caras.getSelectedItem());*/
-        
+        String mensage = "La cara que eligio es: ";
+        switch (caras.getSelectedIndex()) {
+            case 0:
+            cara1.setLocation(160, 50);
+           
+            cara1.setEnabled(true);
+            cara1.setVisible(true);
+            cara2.setVisible(false);
+            cara3.setVisible(false);
+            cara4.setVisible(false);
+            cara5.setVisible(false);
+            System.out.println(mensage + caras.getSelectedItem());
+            break;
+            case 1:
+                
+            cara2.setLocation(160, 50);
+            cara2.setEnabled(true);
+            cara1.setVisible(false);
+            cara2.setVisible(true);
+            cara3.setVisible(false);
+            cara4.setVisible(false);
+            cara5.setVisible(false);
+            System.out.println(mensage + caras.getSelectedItem());
+            break;
+            case 2:
+                
+            cara3.setLocation(160, 50);
+            cara3.setEnabled(true);
+            cara1.setVisible(false);
+            cara2.setVisible(false);
+            cara3.setVisible(true);
+            cara4.setVisible(false);
+            cara5.setVisible(false);
+            System.out.println(mensage + caras.getSelectedItem());
+            break;
+            case 3:
+                
+            cara4.setLocation(160, 50);
+            cara4.setEnabled(true);
+            cara1.setVisible(false);
+            cara2.setVisible(false);
+            cara3.setVisible(false);
+            cara4.setVisible(true);
+            cara5.setVisible(false);
+            System.out.println(mensage + caras.getSelectedItem());
+            break;
+            case 4:
+                
+            cara5.setLocation(160, 50);
+            cara5.setEnabled(true);
+            cara1.setVisible(false);
+            cara2.setVisible(false);
+            cara3.setVisible(false);
+            cara4.setVisible(false);
+            cara5.setVisible(true);
+            System.out.println(mensage + caras.getSelectedItem());
+            break;
+
+        }
     }//GEN-LAST:event_carasActionPerformed
 
     /**
@@ -247,18 +1211,49 @@ ImageIcon boca1,boca2,boca3,boca4,boca5,barba1,barba2,barba3,barba4,barba5,propi
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLayeredPane Panel1;
     private javax.swing.JButton ayuda;
+    private javax.swing.JLabel barba1;
+    private javax.swing.JLabel barba2;
+    private javax.swing.JLabel barba3;
+    private javax.swing.JLabel barba4;
+    private javax.swing.JLabel barba5;
     private javax.swing.JComboBox<String> barbas;
+    private javax.swing.JLabel boca1;
+    private javax.swing.JLabel boca2;
+    private javax.swing.JLabel boca3;
+    private javax.swing.JLabel boca4;
+    private javax.swing.JLabel boca5;
     private javax.swing.JComboBox<String> bocas;
+    private javax.swing.JLabel cabello1;
+    private javax.swing.JLabel cabello2;
+    private javax.swing.JLabel cabello3;
+    private javax.swing.JLabel cabello4;
+    private javax.swing.JLabel cabello5;
     private javax.swing.JComboBox<String> cabellos;
+    private javax.swing.JLabel cara1;
+    private javax.swing.JLabel cara2;
+    private javax.swing.JLabel cara3;
+    private javax.swing.JLabel cara4;
+    private javax.swing.JLabel cara5;
     private javax.swing.JComboBox<String> caras;
     private javax.swing.JComboBox<String> cejas;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel cejas1;
+    private javax.swing.JLabel cejas2;
+    private javax.swing.JLabel cejas3;
+    private javax.swing.JLabel cejas4;
+    private javax.swing.JLabel cejas5;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JComboBox<String> ojos;
+    private javax.swing.JLabel ojos1;
+    private javax.swing.JLabel ojos2;
+    private javax.swing.JLabel ojos3;
+    private javax.swing.JLabel ojos4;
+    private javax.swing.JLabel ojos5;
+    private javax.swing.JPanel panelOpciones;
     private javax.swing.JButton regresar;
     private javax.swing.JButton salir;
     // End of variables declaration//GEN-END:variables
-
-    
+/*
+     */
 }

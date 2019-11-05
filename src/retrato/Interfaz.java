@@ -8,11 +8,9 @@ package retrato;
 import java.applet.AudioClip;
 import java.util.ArrayList;
 import java.util.Iterator;
+import javax.swing.JOptionPane;
 
-/**
- *
- * @author eblan
- */
+
 public class Interfaz extends javax.swing.JFrame {
 
     ArrayList<Persona> lista = new ArrayList<>();
@@ -38,6 +36,7 @@ public class Interfaz extends javax.swing.JFrame {
         id = new javax.swing.JTextField();
         ingresar = new javax.swing.JButton();
         salir = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Interfaz");
@@ -57,6 +56,12 @@ public class Interfaz extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("ID:");
 
+        nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nombreActionPerformed(evt);
+            }
+        });
+
         ingresar.setBackground(new java.awt.Color(102, 204, 255));
         ingresar.setText("INGRESAR");
         ingresar.setToolTipText("INGRESAR");
@@ -72,6 +77,16 @@ public class Interfaz extends javax.swing.JFrame {
         salir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 salirActionPerformed(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Sitka Small", 1, 11)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 153));
+        jButton1.setText("?");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -101,6 +116,8 @@ public class Interfaz extends javax.swing.JFrame {
                         .addGap(0, 27, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(115, 115, 115)
                         .addComponent(salir)))
                 .addContainerGap())
         );
@@ -120,8 +137,10 @@ public class Interfaz extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addComponent(ingresar)
                 .addGap(18, 18, 18)
-                .addComponent(salir)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(salir)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -174,6 +193,16 @@ public class Interfaz extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ingresarActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+      JOptionPane.showMessageDialog(null, "                                    ***Bienvenido****\nPor favor ingresa tus datos (Nombre y ID).\n\n\n"
+              + "**Creado por: Luis Miguel Correa - Emerson Blanco - Nicolas fonseca** \n"
+              + "                            Numero de version - 1.0.1");
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nombreActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -212,6 +241,7 @@ public class Interfaz extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField id;
     private javax.swing.JButton ingresar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
